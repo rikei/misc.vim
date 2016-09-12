@@ -13,7 +13,7 @@ map <F11> :call ToggleFullScreen()<CR>
 map <F12> :call ToggleVimTopMostMode()<CR>
 
 command! SetTitle call MiscSetTitle()
-au BufNewFile *.{c,cpp,h} call MiscSetCEnv()
+au BufNewFile,BufRead *.{c,cpp,h} call MiscSetCEnv()
 "============================================================================
 if !exists('g:misc_lib_home')
 	let g:misc_lib_home=$HOME.'\.vim\bundle\misc.vim\libs'
