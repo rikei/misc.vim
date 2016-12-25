@@ -1,9 +1,9 @@
 # env setting
 ```
-export MISC_CSCOPE_C=~/cscope_sys.out,~/cscope_core.out
-export MISC_TAGS_C=~/tags_core,~/tags_sys
-export MISC_PATH_C=$APPHOME/include,$DB2HOME/include,/usr/include,/usr/local/include,/usr/include/libxml2
-export MISC_GCC_OPT_C="-fPIC -Wall -std=c99 -D_XOPEN_SOURCE=600 -fms-extensions -DLINUX -D_DBTYPE_DB2 "
+export VIM_MISC_CSCOPE_C=~/cscope_sys.out,~/cscope_core.out
+export VIM_MISC_TAGS_C=~/tags_core,~/tags_sys
+export VIM_MISC_PATH_C=$APPHOME/include,$DB2HOME/include,/usr/include,/usr/local/include,/usr/include/libxml2
+export VIM_MISC_GCC_OPT_C="-fPIC -Wall -std=c99 -D_XOPEN_SOURCE=600 -fms-extensions -DLINUX -D_DBTYPE_DB2 "
 ```
 
 # ctags and cscope

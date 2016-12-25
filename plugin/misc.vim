@@ -56,16 +56,16 @@ endfunc
 " set tags and cscope
 func! MiscSetCEnv()
     if has("path_extra")
-        if "" != $MISC_PATH_C
-            for path in split($MISC_PATH_C, ',\| ')
+        if "" != $VIM_MISC_PATH_C
+            for path in split($VIM_MISC_PATH_C, ',\| ')
                 exec "set path+=".path
             endfor
         endif
     endif
 
     if has("emacs_tags")
-        if "" != $MISC_TAGS_C
-            for tag in split($MISC_TAGS_C, ',\| ')
+        if "" != $VIM_MISC_TAGS_C
+            for tag in split($VIM_MISC_TAGS_C, ',\| ')
                 exec "set tags+=".tag
             endfor
         endif
@@ -79,8 +79,8 @@ func! MiscSetCEnv()
         "set cscopequickfix=s-,c-,d-,i-,t-,e-
         set nocsverb
 
-        if "" != $MISC_CSCOPE_C
-            for cscope in split($MISC_CSCOPE_C, ',\| ')
+        if "" != $VIM_MISC_CSCOPE_C
+            for cscope in split($VIM_MISC_CSCOPE_C, ',\| ')
                 exec "cs add ".cscope
             endfor
         endif
