@@ -36,9 +36,14 @@ func! MiscSetTitle ()
     " shabang
     if "sh" == &ft
         let s:title .= "#!/bin/env bash\r"
-    elseif "python" ==&ft
+    elseif "python" == &ft
         let s:title  = "#!/bin/env python\r"
-        let s:title .= "# -*- coding: utf-8 -*-\r"
+
+        if &encoding == 'cp936' || &encoding == 'gbk' 
+            let s:title .= "# -*- coding: gbk -*-\r"
+        else
+            let s:title .= "# -*- coding: utf-8 -*-\r"
+        endif
     endif
 
     " body
