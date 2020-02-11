@@ -8,8 +8,8 @@ export VIM_MISC_GCC_OPT_C="-fPIC -Wall -std=c99 -D_XOPEN_SOURCE=600 -fms-extensi
 
 # ctags and cscope
 ```
-ctags -I __THROW,__attribute_pure__,__nonnull,__attribute__ --langmap=c:+.h --languages=c,c++ --c-kinds=+px --c++-kinds=+px --fields=+iafksS --extra=+qf ->
-find /usr/include -name "*.h" > ~/cscope_sys.files && cscope -b -i  ~/cscope_sys.files -f ~/cscope_sys.out
+ctags -I __THROW,__attribute_pure__,__nonnull,__attribute__ --langmap=c:+.h --languages=c,c++ --c-kinds=+px --c++-kinds=+px --fields=+iafksS --extra=+qf -f ~/tags_core -R ~/core
+find ~/core -name "*.h" -o -name "*.c" -o -name "*.sqc">~/cscope_core.files && cscope -b -i ~/cscope_core.files -f ~/cscope_core.out
 ```
 
 # command
